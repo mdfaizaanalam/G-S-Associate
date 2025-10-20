@@ -12,9 +12,8 @@
 | 5 | [Key Features and Functionality](#key-features-and-functionality) |
 | 6 | [Use Cases and Industry Applications](#use-cases-and-industry-applications) |
 | 7 | [Business and Future Scalability](#business-and-future-scalability) |
-| 8 | [Video Demo Links](#video-demo-links) |
-| 9 | [Live Demo of G S Associates App](#live-demo-of-g-s-associates-app) |
-| 10 | [Technologies Used](#technologies-used) |
+| 8 | [Live Demo of G S Associates App](#live-demo-of-g-s-associates-app) |
+| 9 | [Technologies Used](#technologies-used) |
 
 ---
 
@@ -92,12 +91,6 @@ G S Associates provides a **centralized, interactive, and intelligent financial 
 - CI/CD pipeline ensures smooth updates and scaling  
 - Future integration with **Node.js, Express.js, and MongoDB** for secure data persistence  
 - Advanced analytics and dashboards for actionable insights  
-
----
-
-## **8. Video Demo Links**
-- [Project Walkthrough Video](#) *(Link to your demo video)*  
-- [Feature Highlights Video](#) *(Optional)*  
 
 ---
 
@@ -234,7 +227,6 @@ This project is licensed under the **MIT License** - see [LICENSE](./LICENSE)
 
 ---
 
-<<<<<<< HEAD
 ## 📞 Connect with Me
 
 <p align="center">
