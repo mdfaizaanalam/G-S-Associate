@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Blogs - G S Associates</title>
+  <style>
+    .update {
+      display: block;
+      margin-bottom: 34px;
+    }
+  </style>
+  <meta name="description"
+    content="Explore insightful articles and updates on finance, investments, and economics at G S Associates's blog. Stay informed with expert perspectives and analysis." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="/assets/images/favicon2.webp" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/animate.css" />
+  <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="./assets/css/slick.css" />
+  <link rel="stylesheet" href="./assets/css/LineIcons.css" />
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <link rel="stylesheet" href="./assets/css/default.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/quiz.css" />
+  <link rel="stylesheet" href="./assets/css/popup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/blog.css" />
+  <!-- Added the navbar.css file here so that the navbar looks nice and uniform in all pages -->
+  <link rel="stylesheet" href="./assets/css/navbar.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<body>
+
+  <div id="progressBar"></div>
+  <div class="preloader">
+    <div class="loader">
+      <div class="ytp-spinner">
+        <div class="ytp-spinner-container">
+          <div class="ytp-spinner-rotator">
+            <div class="ytp-spinner-left">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+            <div class="ytp-spinner-right">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-area">
+    <div style="display: flex; justify-content: center;" class="navbar-area">
+      <div style="display: flex; justify-content: center;" class="container">
+        <div class="row">
+          <div style="display: flex; justify-content: center;" class="">
+            <nav class="navbar navbar-expand-lg" style="display: flex; background-color: #2c3e50;">
+              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <div class="icon1">
+                  <a href="./index.html">
+                    <img src="./assets/images/GSAssociatesLogo.png" alt="G S Assiciates Logo" style="width: 13rem;">
+                  </a>
+                </div>
+                <ul id="nav" class="navbar-nav ml-auto" style="margin: auto;">
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./index.html">
+                      <i class="fas fa-home icon-hover" style="margin: 5px;"></i> Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./about.html">
+                      <i class="fas fa-info-circle icon-hover" style="margin: 5px;"></i> About Us
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./finance.html">
+                      <i class="fas fa-graduation-cap icon-hover" style="margin: 5px;"></i> Courses
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./contact.html">
+                      <i class="fas fa-envelope icon-hover" style="margin: 5px;"></i> Contact
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./tools//sip.html">
+                      <i class="fas fa-tools icon-hover" style="margin: 5px;"></i> Tools</a>
+                  </li>
+                  <!-- Dropdown for Explore -->
+                  <li class="nav-item dropdown" onmouseover="toggleDropdown(true)" onmouseout="toggleDropdown(false)">
+                    <a class="page-scroll dropdown-toggle" href="#">
+                      <i class="fas fa-chevron-down icon-hover" style="margin: 5px;"></i> Explore More
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="./trends.html"><i class="fas fa-chart-line icon-hover" style="margin: 5px;"></i>
+                          Trends</a>
+                      </li>
+                      <li><a href="./quiz.html"><i class="fas fa-question icon-hover" style="margin: 5px;"></i> Quiz</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Navigation item placeholder for Login/Register or Logout button -->
+                  <li class="nav-item no-underline" id="auth-btn-container">
+                    <a class="main-btn navbar-btn" style="padding: 2px 20px;" data-scroll-nav="0"
+                      href="./loginPage.html"> Login/Register
+                    </a>
+                  </li>
+                  <li class="nav-item no-underline align-self-center">
+                    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                      <span>🌞</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+
+          <script>
+            const toggleButton = document.getElementById('theme-toggle');
+            var body = document.body;
+            var currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme === 'dark') {
+              body.classList.add('dark-mode');
+              toggleButton.classList.add('dark');
+              toggleButton.querySelector('span').textContent = '🌞';
+            }
+
+            toggleButton.addEventListener('click', function () {
+              body.classList.toggle('dark-mode');
+              toggleButton.classList.toggle('dark');
+
+              // Update button icon based on mode
+              if (body.classList.contains('dark-mode')) {
+                toggleButton.querySelector('span').textContent = '🌙';  // Light mode icon
+                localStorage.setItem('theme', 'dark');
+              } else {
+                toggleButton.querySelector('span').textContent = '🌞';  // Dark mode icon
+                localStorage.setItem('theme', 'light');
+              }
+              loadShow();
+            });
+          </script>
+          <style>
+            h3 {
+              color: #fff;
+            }
+
+            .toggle-button {
+              padding: 0.5em 1em;
+              cursor: pointer;
+              border: none;
+              background-color: #0c0a0a;
+              color: #fff;
+              border-radius: 5px;
+              transition: background-color 0.3s;
+            }
+
+            .toggle-button:hover {
+              background-color: #555;
+            }
+
+            .content {
+              padding: 2em;
+              text-align: center;
+            }
+
+            h1 {
+              font-size: 2.5rem;
+              color: whitesmoke;
+              margin-top: 130px;
+            }
+
+            p {
+              font-size: 1.2rem;
+            }
+          </style>
+
+          </nav>
+
+
+
+          <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+          <nav class="mobile-menu ">
+            <a href="./index.html">
+              <img src="./assets/images/GSAssociatesLogo.png" alt="icon.png" style="width: 13rem;"></a>
+            <a class="page-scroll active-link" href="./index.html">
+              <i class="fas fa-home icon-hover" style="margin: 5px;"></i> Home</a>
+            <a class="page-scroll" href="./about.html">
+              <i class="fas fa-info-circle icon-hover" style="margin: 5px;"></i> About Us</a>
+
+            <!-- <a class="page-scroll" href="./tools/sip.html"><i class="fas fa-tools icon-hover"
+                style="margin: 5px;"></i>Tools</a>
+
+            <a class="page-scroll" href="./trends.html">
+              <i class="fas fa-chart-line icon-hover" style="margin: 5px;"></i> Trends</a> -->
+
+            <a class="page-scroll" href="./contact.html">
+              <i class="fas fa-envelope icon-hover" style="margin: 5px;"></i> Contact</a>
+
+            <a class="page-scroll" href="./blog.html">
+              <i class="fas fa-blog icon-hover" style="margin: 5px;"></i> Blogs</a>
+
+            <a class="page-scroll" href="./quiz.html">
+              <i class="fas fa-question icon-hover" style="margin: 5px;"></i>Quiz</a>
+
+            <a class="page-scroll" href="./finance.html">
+              <i class="fas fa-graduation-cap icon-hover" style="margin: 5px;"></i> Courses</a>
+
+            <li class="nav-item no-underline" id="auth-btn-container-mobile">
+              <a class="main-btn navbar-btn" style="padding: 2px 20px; transform: none; border: none;"
+                href="./loginPage.html">Login/Register 💻</a>
+            </li>
+
+            <li class="nav-item no-underline">
+              <button id="theme-toggle2" class="theme-toggle2" style="margin-right: 2px;">
+                🌙
+              </button>
+            </li>
+
+            <div class="mobile-menu__trigger" onclick="toggleMobileMenu()">
+              <span></span>
+            </div>
+          </nav>
+          <script>
+            const toggleBtn = document.getElementById('theme-toggle2');
+            var body = document.body;
+            var currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme === 'dark') {
+              body.classList.add('dark-mode');
+              toggleBtn.classList.add('dark');
+              toggleBtn.textContent = '🌞';
+            }
+
+            toggleBtn.addEventListener('click', function () {
+              body.classList.toggle('dark-mode');
+              toggleBtn.classList.toggle('dark');
+
+              // Update button icon based on mode
+              if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '🌞';  // Light mode icon
+                localStorage.setItem('theme', 'dark');
+              } else {
+                toggleBtn.textContent = '🌙';  // Dark mode icon
+                localStorage.setItem('theme', 'light');
+              }
+            });
+          </script>
+          <link href="./assets/css/navbar.css" rel="stylesheet">
+          <script type="text/javascript" src="./assets/js/navbar.js"></script>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+  </header>
+
+  <div class="blogfull">
+    <article>
+      <section id="blog" class="blog-area pt-100">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-2">
+              <img id="blog-pic" style="mix-blend-mode: multiply; left: 210px;" src="./assets/images/blog-img.webp"
+                alt="QUIZ">
+            </div>
+            <div class="col-lg-6">
+              <div class="section-title" data-aos="zoom-in">
+                <h1 id="title" style="font-size: 2.0rem; margin-top: 60px; margin-left: 5px;">Blog Posts</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-4">
+            <div class="col-lg-2 text-end">
+              <button type="button" class="btn btn-primary add-blog-btn" style="width: 100%;"
+                onclick="window.location.href='/addBlog.html'">Add Blog</button>
+            </div>
+            <div class="col-lg-8 col-md-10">
+              <form class="search-bar" id="search-form">
+                <input type="text" id="search-input" class="form-control" placeholder="Search for blog posts..."
+                  aria-label="Search" required>
+              </form>
+            </div>
+          </div>
+
+          <!-- Filtered blog posts -->
+          <div id="filtered-blogs" class="row justify-content-start mt-4 card-container">
+            <!-- Filtered blog posts will be inserted here -->
+          </div>
+        </div>
+      </section>
+    </article>
+
+  </div>
+  <style>
+    #title {
+      font-size: 4rem;
+      margin-left: 40px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-align: center;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease-in-out;
+      text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+    }
+
+    #title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 3px;
+      background-color: #3498db;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    #title:hover::after {
+      transform: scaleX(1);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    #blog-pic {
+      max-width: 50%;
+    }
+
+    /* Card Styling */
+    .card {
+      background-color: #ffffff;
+      color: #1a202c;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Hover Effect */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Dark Mode */
+    .card.dark {
+      background-color: #1f2937;
+      color: #f9fafb;
+    }
+
+    /* Image Styling */
+    .card-image {
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0.75rem;
+    }
+
+    /* Content Styling */
+    .card-content {
+      padding: 1.5rem;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title-link {
+      color: #1a202c;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .card-title-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Excerpt Text */
+    .card-excerpt {
+      color: #4a5568;
+      margin-bottom: 1rem;
+    }
+
+    /* Dark Mode Adjustments */
+    .card.dark .card-title-link {
+      color: #f9fafb;
+    }
+
+    .card.dark .card-excerpt {
+      color: #a0aec0;
+    }
+
+    /* Footer */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      color: #718096;
+      margin-top: auto;
+    }
+
+    .card-footer time {
+      color: inherit;
+    }
+
+    .card-tags {
+      margin-left: 1rem;
+      font-weight: 500;
+      color: #1a202c;
+    }
+
+    .card.dark .card-tags {
+      color: #f9fafb;
+    }
+
+    /* Read More Link */
+    .card-read-more {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      color: #4f46e5;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .card-read-more:hover {
+      color: #3730a3;
+    }
+
+    .icon {
+      height: 1rem;
+      width: 1rem;
+      margin-left: 0.25rem;
+      margin-top: 0px;
+    }
+
+    /* Responsive Layout for Smaller Screens */
+    @media (max-width: 768px) {
+      .card-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .add-blog-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      /* Padding for a professional look */
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: -55%;
+    }
+
+    .add-blog-btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    /* Align Add Blog button to the right */
+    .text-end {
+      text-align: right;
+      margin-top: 60px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #title {
+        font-size: 2rem;
+      }
+
+      .blog-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <section id="blog" class="blog-area">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-lg-4 col-md-7" data-aos="slide-right">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <div class="blog-image">
+              <a href="./blogs/how-to-deal-with-unknown-risks-in-life-and-investing.html">
+                <img src="assets/images/blog-1.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <a href="./blogs/how-to-deal-with-unknown-risks-in-life-and-investing.html">
+                <p class="reviewtext">
+                  How to deal with Unknown Risks in Life and Investing?
+                </p>
+              </a>
+              <a class="more" href="./blogs/how-to-deal-with-unknown-risks-in-life-and-investing.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="zoom-in">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/how-to-10x-your-generational-wealth.html">
+                <img src="./assets/images/blog-2.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">How to 10x your Generational Wealth?</p>
+              <a class="more" href="./blogs/how-to-10x-your-generational-wealth.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-left">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/invest-minimal.html">
+                <img src="./assets/images/women.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <a href="./blogs/invest-minimal.html">
+                <p class="reviewtext">
+                  Investing with Minimal Savings: A Guide for Women Investors
+                </p>
+              </a>
+              <a class="more" href="./blogs/invest-minimal.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-right">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/Pocketmoney.html">
+                <img src="./assets/images/pocket.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Can Pocket Money Turn Into Investment? A Guide for Teenagers
+              </p>
+              <a class="more" href="./blogs/Pocketmoney.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="zoom-in">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/senior.html">
+                <img src="./assets/images/senior.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Investment Opportunities for Senior Citizens: Securing Your Future
+              </p>
+              <a class="more" href="./blogs/senior.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-left">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/why-investing-in-stocks-is-better-than-fixed-deposit.html">
+                <img src="./assets/images/blog-3.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Why investing in stocks is better than fixed deposit?
+              </p>
+              <a class="more" href="./blogs/why-investing-in-stocks-is-better-than-fixed-deposit.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-right">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="/blogs/starup.html">
+                <img src="assets/images/staryp.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Unlocking Potential: The Benefits and Opportunities of Investing in Startups
+              </p>
+              <a class="more" href="./blogs/starup.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="zoom-in">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/how-fintech-is-revolutionizing-small-business-lending.html">
+                <img src="./assets/images/fintech.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                How Fintech is Revolutionizing Small Business Lending.
+              </p>
+              <a class="more" href="./blogs/how-fintech-is-revolutionizing-small-business-lending.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-left">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/economic-trends-and-analysis.html">
+                <img src="./assets/images/economic-trend-analysis.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Economic Trends and Analysis.
+              </p>
+              <a class="more" href="./blogs/economic-trends-and-analysis.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-right">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/empowering-you-with-economic-knowledge-for-smarter-decisions.html">
+                <img src="./assets/images/Empowering.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Empowering you with economic knowledge for smarter decisions.
+              </p>
+              <a class="more" href="./blogs/empowering-you-with-economic-knowledge-for-smarter-decisions.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="zoom-in">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/Mutual-Funds-101-A-Beginners-Guide-to-Smart-Investing.html">
+
+                <img src="./assets/images/Mutual-funds.webp" alt="blog" />
+
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Mutual Funds 101: A Beginner’s Guide to Smart Investing
+              </p>
+              <a class="more" href="./blogs/Mutual-Funds-101-A-Beginners-Guide-to-Smart-Investing.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-left">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/saving-for-future.html">
+                <img src="./assets/images/saving.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Saving for the Future.
+              </p>
+              <a class="more" href="./blogs/saving-for-future.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-right">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/real-estate-economics.html">
+                <img src="./assets/images/real-estate.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Real Estate Economics
+              </p>
+              <a class="more" href="./blogs/real-estate-economics.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-7" data-aos="slide-left">
+          <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="blog-image">
+              <a href="./blogs/Types-of-Stock-Investments-A-Quick-Guide.html">
+                <img src="./assets/images/types-of-stock-investment-a-quick-guide-blog.webp" alt="blog" />
+              </a>
+            </div>
+            <div class="blog-content">
+              <p class="reviewtext">
+                Types of Stock Investment: A Quick Guide
+              </p>
+              <a class="more" href="./blogs/Types-of-Stock-Investments-A-Quick-Guide.html">
+                Learn More <i class="lni-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-area pt-70">
+      <div class="footer-widget pb-50">
+        <div class="row" id="footer">
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="footer-about mt-50 ml-45 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <img src="./assets/images/GSAssociatesLogo.png" alt="G S Associates Logo"
+                style="height: 100px; width: auto; margin-bottom: 15px;" />
+              <p class="text custom-margin">
+                We at G S Associates aim to make you a stock market Guru easily with our AI-powered teaching and
+                financial blogs.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-7 col-sm-7">
+            <div class="footer-link d-flex mt-50 justify-content-md-between"
+              style="justify-content: space-around !important;">
+              <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="footer-title">
+                  <h3 class="title custom-margin">Quick Links</h3>
+                </div>
+                <ul class="link custom-margin">
+                  <li><a href="./blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                  <li><a href="./trends.html"><i class="fas fa-chart-line"></i> Trends</a></li>
+                  <li><a href="./privacy-policy.html"><i class="fas fa-user-secret"></i> Privacy Policy</a></li>
+                  <li><a href="./terms-of-service.html"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
+
+                </ul>
+              </div>
+              <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                <div class="footer-title">
+                  <h4 class="title custom-margin">Resources</h4>
+                </div>
+                <ul class="link custom-margin">
+                  <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                  <li><a href="./about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                  <li><a href="./tools/sip.html"><i class="fas fa-tools"></i> Tools</a></li>
+                  <li><a href="./quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-7 col-sm-7">
+            <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+              <div class="footer-title">
+                <h4 class="title custom-margin">Contact Us</h4>
+              </div>
+              <ul class="contact custom-margin-big" style="justify-content: space-around;">
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-envelope d-sm-flex align-items-center white" style="font-size: 16px; width: 10%;"></i>
+                  <p style="width: 80%;">
+                    <a href="mailto:sarfraz813@gmail.com" target="_blank"
+                      style="color: white; text-decoration: underline;">
+                      sarfraz813@gmail.com
+                    </a>
+                  </p>
+                </li>
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-globe d-sm-flex align-items-center white" style="font-size: 16px; width: 10%;"></i>
+                  <div style="width: 80%;">
+                    <a href="https://gsassociates.netlify.app" target="_blank" style="color: #fff;">
+                      G S Associates
+                    </a>
+                  </div>
+                </li>
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-location-dot d-sm-flex align-items-center white"
+                    style="font-size: 14px; width: 10%;"></i>
+                  <div style="width: 80%;">
+                    <a href="https://www.google.com/maps/place/Ashiana+Plaza,+Patna,+Bihar/" target="_blank"
+                      rel="noopener noreferrer" style="color: #fff;">Patna, Bihar, India</a>
+                  </div>
+                </li>
+
+                <div class="social-icons">
+                  <a href="https://www.instagram.com/_sarfraz_ahmad"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/sarfraz.ahmad.3701"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://x.com/mdfaizaanalam_"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://github.com/mdfaizaanalam"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/mdfaizaanalam"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s"
+        style="text-align: center">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright d-sm-flex justify-content-center"
+              style="display: flex; justify-content: center; text-align: center; width: 100%; height: 100%;">
+              <div class="copyright-content" style="text-align: center">
+                <p class="text" style="text-align: center">
+                  © <span id="copyright-year"></span> G S Associates. All rights are reserved<br />
+                  Made with ♥ in India
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      // Automatically set the current year
+      document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    </script>
+
+  </footer>
+
+
+
+  <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+    <div class="scroll-top-icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <svg class="progress-ring" width="60" height="60">
+      <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30">
+      </circle>
+    </svg>
+  </button>
+  <style>
+    .scroll-top {
+      position: fixed;
+      right: 1.6%;
+      background: #635adc;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+      overflow: visible;
+      z-index: 10;
+      bottom: 110px;
+      margin-right: 10px;
+      /* Ensure button is on top */
+    }
+
+    .scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      transform: scale(1.1);
+      /* Subtle scaling instead of expanding */
+      box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+      /* Slightly larger shadow */
+    }
+
+    .scroll-top:active {
+      transform: scale(1.05);
+      /* Minor scale reduction on click */
+    }
+
+    .scroll-top-icon {
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-top:hover .scroll-top-icon {
+      transform: translateY(-3px);
+    }
+
+    /* Progress Ring Styling */
+    .progress-ring {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      /* To start from the top */
+    }
+
+    .progress-ring__circle {
+      transition: stroke-dashoffset 0.35s;
+      transform-origin: 50% 50%;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+      }
+
+      100% {
+        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+      }
+    }
+
+    .scroll-top:hover {
+      animation: pulse 1.5s infinite;
+    }
+
+    .scroll-top.show {
+      animation: none;
+      /* No animation when showing the button */
+    }
+
+    .scroll-top.show:hover {
+      animation: pulse 1.5s infinite;
+      /* Pulse on hover */
+    }
+  </style>
+  <script>
+    // Get the button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    const progressCircle = document.querySelector(".progress-ring__circle");
+    const radius = progressCircle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    // Set the circle progress properties
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    // Function to show or hide the button based on scroll position
+    function toggleScrollButton() {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.classList.add("show");
+      } else {
+        scrollToTopBtn.classList.remove("show");
+      }
+    }
+
+    // Function to set the scroll progress on the button ring
+    function setProgress(percent) {
+      const offset = circumference - (percent / 100) * circumference;
+      progressCircle.style.strokeDashoffset = offset;
+    }
+
+    // Listen for scroll events to update button visibility and progress
+    window.addEventListener("scroll", () => {
+      toggleScrollButton();
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      setProgress(scrollPercent);
+    });
+
+    // Smooth scroll to top when the button is clicked
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+  <script src="./assets/js/blog.js"></script>
+  <script src="./assets/js/subscribe.js"></script>
+  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./assets/js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins.js"></script>
+  <script src="./assets/js/slick.min.js"></script>
+  <script src="./assets/js/ajax-contact.js"></script>
+  <script src="./assets/js/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+  <script src="./assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="./assets/js/blogposts.js"></script>
+  <script src="./assets/js/jquery.easing.min.js"></script>
+  <script src="./assets/js/scrolling-nav.js"></script>
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/popup.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js" defer></script>
+  <script defer src="./assets/js/arthsathi-style.js"></script>
+  <script src="./assets/js/botpress.js"></script>
+  <script src="./assets/js/blogmodals.js"></script>
+  <script src="./tools/smoothScroll.js"></script>
+  <script src="./assets/js/loginupdate.js"></script>
+
+  <div class="gtranslate_wrapper"></div>
+  <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000
+    });
+  </script>
+
+
+</body>
+
+</head>
+
+</html>

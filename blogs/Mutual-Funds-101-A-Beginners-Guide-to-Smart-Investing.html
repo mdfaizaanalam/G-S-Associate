@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Empowering You With Economic - G S Associates</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="..//assets/images/favicon2.webp" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="../assets/css/slick.css" />
+  <link rel="stylesheet" href="../assets/css/LineIcons.css" />
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/default.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/popup.css" />
+  <!-- Linked CSS for social logos -->
+  <link rel="stylesheet" href="../assets/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="./new.css" />
+  <style>
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 8px;
+      background-color: #f76b45;
+      z-index: 9999;
+    }
+
+    body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode h2 {
+      color: #e0e0e0 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+  <div class="preloader">
+    <div class="loader">
+      <div class="ytp-spinner">
+        <div class="ytp-spinner-container">
+          <div class="ytp-spinner-rotator">
+            <div class="ytp-spinner-left">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+            <div class="ytp-spinner-right">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-area">
+    <div style="display: flex; justify-content: center;" class="navbar-area">
+      <div style="display: flex; justify-content: center;" class="container">
+        <div class="row">
+          <div style="display: flex; justify-content: center;" class="">
+            <nav class="navbar navbar-expand-lg" style="display: flex; background-color: #2c3e50;">
+              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <div class="icon1">
+                  <a href="../index.html">
+                    <img src="../assets/images/GSAssociatesLogo.png" alt="G S Assiciates Logo" style="width: 13rem;">
+                  </a>
+                </div>
+                <ul id="nav" class="navbar-nav ml-auto" style="margin: auto;">
+                  <li class="nav-item">
+                    <a class="page-scroll" href="../index.html">
+                      <i class="fas fa-home icon-hover" style="margin: 5px;"></i> Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="../about.html">
+                      <i class="fas fa-info-circle icon-hover" style="margin: 5px;"></i> About Us
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="../finance.html">
+                      <i class="fas fa-graduation-cap icon-hover" style="margin: 5px;"></i> Courses
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="../contact.html">
+                      <i class="fas fa-envelope icon-hover" style="margin: 5px;"></i> Contact
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="../tools/sip.html">
+                      <i class="fas fa-tools icon-hover" style="margin: 5px;"></i> Tools</a>
+                  </li>
+                  <!-- Dropdown for Explore -->
+                  <li class="nav-item dropdown" onmouseover="toggleDropdown(true)" onmouseout="toggleDropdown(false)">
+                    <a class="page-scroll dropdown-toggle" href="#">
+                      <i class="fas fa-chevron-down icon-hover" style="margin: 5px;"></i> Explore More
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="../trends.html"><i class="fas fa-chart-line icon-hover" style="margin: 5px;"></i>
+                          Trends</a>
+                      </li>
+                      <li><a href="../quiz.html"><i class="fas fa-question icon-hover" style="margin: 5px;"></i>
+                          Quiz</a>
+                      </li>
+                      <li><a href="../blog.html"><i class="fas fa-blog icon-hover" style="margin: 5px;"></i> Blogs</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Navigation item placeholder for Login/Register or Logout button -->
+                  <li class="nav-item no-underline" id="auth-btn-container">
+                    <a class="main-btn navbar-btn" style="padding: 2px 20px;" data-scroll-nav="0"
+                      href="../loginPage.html">
+                      <i class="fas fa-user-circle icon-hover" style="margin: 5px;"></i> Login/Register
+                    </a>
+                  </li>
+                  <li class="nav-item no-underline align-self-center">
+                    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                      <span>🌞</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+
+          <script>
+            const toggleButton = document.getElementById('theme-toggle');
+            var body = document.body;
+            var currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme === 'dark') {
+              body.classList.add('dark-mode');
+              toggleButton.classList.add('dark');
+              toggleButton.querySelector('span').textContent = '🌞';
+            }
+
+            toggleButton.addEventListener('click', function () {
+              body.classList.toggle('dark-mode');
+              toggleButton.classList.toggle('dark');
+
+              // Update button icon based on mode
+              if (body.classList.contains('dark-mode')) {
+                toggleButton.querySelector('span').textContent = '🌙';  // Light mode icon
+                localStorage.setItem('theme', 'dark');
+              } else {
+                toggleButton.querySelector('span').textContent = '🌞';  // Dark mode icon
+                localStorage.setItem('theme', 'light');
+              }
+              loadShow();
+            });
+          </script>
+          <style>
+            h3 {
+              color: #fff;
+            }
+
+            .toggle-button {
+              padding: 0.5em 1em;
+              cursor: pointer;
+              border: none;
+              background-color: #0c0a0a;
+              color: #fff;
+              border-radius: 5px;
+              transition: background-color 0.3s;
+            }
+
+            .toggle-button:hover {
+              background-color: #555;
+            }
+
+            .content {
+              padding: 2em;
+              text-align: center;
+            }
+
+            h1 {
+              font-size: 2.5rem;
+              color: whitesmoke;
+              margin-top: 130px;
+            }
+
+            p {
+              font-size: 1.2rem;
+            }
+          </style>
+
+          </nav>
+
+
+
+          <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+          <nav class="mobile-menu ">
+            <a href="../index.html">
+              <img src="../assets/images/GSAssociatesLogo.png" alt="icon.png" style="width: 13rem;"></a>
+            <a class="page-scroll active-link" href="../index.html">
+              <i class="fas fa-home icon-hover" style="margin: 5px;"></i> Home</a>
+            <a class="page-scroll" href="../about.html">
+              <i class="fas fa-info-circle icon-hover" style="margin: 5px;"></i> About Us</a>
+
+            <!-- <a class="page-scroll" href="./tools/sip.html"><i class="fas fa-tools icon-hover"
+                style="margin: 5px;"></i>Tools</a>
+
+            <a class="page-scroll" href="./trends.html">
+              <i class="fas fa-chart-line icon-hover" style="margin: 5px;"></i> Trends</a> -->
+
+            <a class="page-scroll" href="../contact.html">
+              <i class="fas fa-envelope icon-hover" style="margin: 5px;"></i> Contact</a>
+
+            <a class="page-scroll" href="../blog.html">
+              <i class="fas fa-blog icon-hover" style="margin: 5px;"></i> Blogs</a>
+
+            <a class="page-scroll" href="../quiz.html">
+              <i class="fas fa-question icon-hover" style="margin: 5px;"></i>Quiz</a>
+
+            <a class="page-scroll" href="../finance.html">
+              <i class="fas fa-graduation-cap icon-hover" style="margin: 5px;"></i> Courses</a>
+
+            <li class="nav-item no-underline" id="auth-btn-container-mobile">
+              <a class="main-btn navbar-btn" style="padding: 2px 20px; transform: none; border: none;"
+                href="../loginPage.html">Login/Register 💻</a>
+            </li>
+
+            <li class="nav-item no-underline">
+              <button id="theme-toggle2" class="theme-toggle2" style="margin-right: 2px;">
+                🌙
+              </button>
+            </li>
+
+            <div class="mobile-menu__trigger" onclick="toggleMobileMenu()">
+              <span></span>
+            </div>
+          </nav>
+          <script>
+            const toggleBtn = document.getElementById('theme-toggle2');
+            var body = document.body;
+            var currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme === 'dark') {
+              body.classList.add('dark-mode');
+              toggleBtn.classList.add('dark');
+              toggleBtn.textContent = '🌞';
+            }
+
+            toggleBtn.addEventListener('click', function () {
+              body.classList.toggle('dark-mode');
+              toggleBtn.classList.toggle('dark');
+
+              // Update button icon based on mode
+              if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '🌞';  // Light mode icon
+                localStorage.setItem('theme', 'dark');
+              } else {
+                toggleBtn.textContent = '🌙';  // Dark mode icon
+                localStorage.setItem('theme', 'light');
+              }
+            });
+          </script>
+          <link href="../assets/css/navbar.css" rel="stylesheet">
+          <script type="text/javascript" src="../assets/js/navbar.js"></script>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+  </header>
+
+
+  <div class="blog-content wide">
+    <article class="card">
+      <h2 style="margin-top: 25px; text-decoration: underline;">Mutual Funds: A Beginner’s Guide to Smart Investing</h2>
+      <p class="intro">
+        Investing can feel overwhelming when you’re just getting started.
+        Mutual funds are one of the most beginner-friendly, accessible, and effective ways to grow your wealth.
+        They allow even small investors to benefit from diversification, professional management, and long-term wealth
+        creation.
+        This guide will walk you through the basics, benefits, and strategies of mutual fund investing,
+        with additional insights to help you make informed financial decisions.
+      </p>
+
+      <!-- What is a Mutual Fund -->
+      <div class="card">
+        <h4>What is a Mutual Fund?</h4>
+        <p>
+          A mutual fund is essentially a <b>pool of money collected from multiple investors</b> and invested into a
+          diversified portfolio of assets like <b>stocks, bonds, or money market instruments</b>.
+          These funds are managed by experienced professionals called <b>fund managers</b>, whose goal is to maximize
+          returns
+          while balancing risk.
+          For first-time investors, mutual funds are an excellent entry point into the financial markets because they
+          don’t require extensive knowledge or large capital to get started.
+        </p>
+      </div>
+
+      <!-- How Mutual Funds Work -->
+      <div class="card">
+        <h4>How Do Mutual Funds Work?</h4>
+        <ul>
+          <li>
+            <b>Pooling Resources:</b> Your money is combined with that of thousands of other investors,
+            creating a larger fund that can access investments an individual might not afford alone.
+          </li>
+          <li>
+            <b>Diversification:</b> By investing in multiple companies, sectors, or bonds,
+            mutual funds spread risk and protect investors from the failure of any single investment.
+          </li>
+          <li>
+            <b>Professional Management:</b> Fund managers monitor the market, research opportunities,
+            and make investment decisions on your behalf, saving you time and effort.
+          </li>
+          <li>
+            <b>Returns:</b> Investors earn returns through <b>dividends, interest, and capital gains</b>.
+            These are distributed proportionally to each investor based on the units they hold.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Types of Mutual Funds -->
+      <div class="card">
+        <h4>Types of Mutual Funds</h4>
+        <ul>
+          <li><b>Equity Funds:</b> Focus on stocks, best for long-term growth. Higher risk, but higher potential
+            returns.</li>
+          <li><b>Bond Funds:</b> Invest in fixed-income securities like government or corporate bonds. Lower risk,
+            suitable for steady income.</li>
+          <li><b>Money Market Funds:</b> Very low risk, invest in short-term instruments. Provide stability and quick
+            liquidity.</li>
+          <li><b>Balanced Funds:</b> A mix of stocks and bonds. Offer moderate risk and balanced returns for
+            conservative investors.</li>
+          <li><b>Index Funds:</b> Track a market index (like Nifty or Sensex) and are a low-cost way to diversify
+            widely.</li>
+          <li><b>SIP (Systematic Investment Plan):</b> Not a type of fund, but a method of investing. Allows you to
+            invest a fixed amount regularly, promoting discipline and consistency.</li>
+        </ul>
+      </div>
+
+      <!-- Benefits -->
+      <div class="card">
+        <h4>Benefits of Investing in Mutual Funds</h4>
+        <ul>
+          <li><b>Diversification:</b> Reduces the risk of losing money by spreading investments across multiple assets.
+          </li>
+          <li><b>Professional Expertise:</b> You benefit from the knowledge and experience of skilled fund managers.
+          </li>
+          <li><b>Liquidity:</b> Mutual fund units can be bought or sold with ease, providing flexibility.</li>
+          <li><b>Affordability:</b> You can start with as little as ₹500 through SIPs.</li>
+          <li><b>Tax Advantages:</b> Certain funds like ELSS (Equity Linked Savings Schemes) offer tax deductions under
+            Section 80C.</li>
+          <li><b>Compounding Effect:</b> The earlier you start, the more your returns multiply over time.</li>
+        </ul>
+      </div>
+
+      <!-- Getting Started -->
+      <div class="card">
+        <h4>How to Get Started with Mutual Funds</h4>
+        <ol>
+          <li><b>Define Your Goals:</b> Are you saving for retirement, your child’s education, or wealth creation?</li>
+          <li><b>Assess Risk Tolerance:</b> Choose funds based on whether you’re risk-averse, moderate, or aggressive.
+          </li>
+          <li><b>Research Funds:</b> Compare funds by looking at their past performance, expense ratio, and manager’s
+            experience.</li>
+          <li><b>Choose Your Method:</b> Lump sum (one-time investment) or SIP (regular monthly investing).</li>
+          <li><b>Open an Account:</b> Register through a mutual fund distributor, bank, or online app to start
+            investing.</li>
+          <li><b>Track and Review:</b> Monitor performance and rebalance if your financial situation or goals change.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Conclusion -->
+      <div class="card">
+        <h4>Conclusion</h4>
+        <p>
+          Mutual funds are one of the smartest ways to begin investing, offering simplicity,
+          diversification, and the benefit of professional management.
+          Whether you start small with SIPs or go for lump sum investments, mutual funds can
+          help you achieve both short-term and long-term financial goals.
+        </p>
+        <p>
+          At <b>G S Associates</b>, we believe financial empowerment begins with informed decisions.
+          Start small, stay consistent, and let the power of compounding work in your favor.
+          Remember: the best time to start investing was yesterday — the second best time is today.
+        </p>
+      </div>
+    </article>
+  </div>
+
+
+  <style>
+    .blog-content {
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 80%;
+      /* Adjust this value to increase or decrease the margins */
+    }
+
+    h4 {
+      color: #6c757d;
+      margin: 1rem 0 1rem 0;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    li b {
+      margin-right: 0.2em;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+      list-style-type: none;
+    }
+  </style>
+
+  <footer>
+    <div class="footer-area pt-70">
+      <div class="footer-widget pb-50">
+        <div class="row" id="footer">
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="footer-about mt-50 ml-45 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <img src="../assets/images/GSAssociatesLogo.png" alt="G S Associates Logo"
+                style="height: 100px; width: auto; margin-bottom: 15px;" />
+              <p class="text custom-margin">
+                We at G S Associates aim to make you a stock market Guru easily with our AI-powered teaching and
+                financial blogs.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-7 col-sm-7">
+            <div class="footer-link d-flex mt-50 justify-content-md-between"
+              style="justify-content: space-around !important;">
+              <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="footer-title">
+                  <h3 class="title custom-margin">Quick Links</h3>
+                </div>
+                <ul class="link custom-margin">
+                  <li><a href="../blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                  <li><a href="../trends.html"><i class="fas fa-chart-line"></i> Trends</a></li>
+                  <li><a href="../privacy-policy.html"><i class="fas fa-user-secret"></i> Privacy Policy</a></li>
+                  <li><a href="../terms-of-service.html"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
+
+                </ul>
+              </div>
+              <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                <div class="footer-title">
+                  <h4 class="title custom-margin">Resources</h4>
+                </div>
+                <ul class="link custom-margin">
+                  <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                  <li><a href="../about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                  <li><a href="../tools/sip.html"><i class="fas fa-tools"></i> Tools</a></li>
+                  <li><a href="../quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-7 col-sm-7">
+            <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+              <div class="footer-title">
+                <h4 class="title custom-margin">Contact Us</h4>
+              </div>
+              <ul class="contact custom-margin-big" style="justify-content: space-around;">
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-envelope d-sm-flex align-items-center white" style="font-size: 16px; width: 10%;"></i>
+                  <p style="width: 80%;">
+                    <a href="mailto:sarfraz813@gmail.com" target="_blank"
+                      style="color: white; text-decoration: underline;">
+                      sarfraz813@gmail.com
+                    </a>
+                  </p>
+                </li>
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-globe d-sm-flex align-items-center white" style="font-size: 16px; width: 10%;"></i>
+                  <div style="width: 80%;">
+                    <a href="https://gsassociates.netlify.app" target="_blank" style="color: #fff;">
+                      G S Associates
+                    </a>
+                  </div>
+                </li>
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-location-dot d-sm-flex align-items-center white"
+                    style="font-size: 14px; width: 10%;"></i>
+                  <div style="width: 80%;">
+                    <a href="https://www.google.com/maps/place/Ashiana+Plaza,+Patna,+Bihar/" target="_blank"
+                      rel="noopener noreferrer" style="color: #fff;">Patna, Bihar, India</a>
+                  </div>
+                </li>
+
+                <div class="social-icons">
+                  <a href="https://www.instagram.com/_sarfraz_ahmad"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/sarfraz.ahmad.3701"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://x.com/mdfaizaanalam_"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://github.com/mdfaizaanalam"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/mdfaizaanalam"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s"
+        style="text-align: center">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright d-sm-flex justify-content-center"
+              style="display: flex; justify-content: center; text-align: center; width: 100%; height: 100%;">
+              <div class="copyright-content" style="text-align: center">
+                <p class="text" style="text-align: center">
+                  © <span id="copyright-year"></span> G S Associates. All rights are reserved<br />
+                  Made with ♥ in India
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      // Automatically set the current year
+      document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    </script>
+
+  </footer>
+
+
+  <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+    <div class="scroll-top-icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <svg class="progress-ring" width="60" height="60">
+      <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30">
+      </circle>
+    </svg>
+  </button>
+  <style>
+    .scroll-top {
+      position: fixed;
+      right: 1.6%;
+      background: #635adc;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+      overflow: visible;
+      z-index: 10;
+      bottom: 110px;
+      margin-right: 10px;
+      /* Ensure button is on top */
+    }
+
+    .scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      transform: scale(1.1);
+      /* Subtle scaling instead of expanding */
+      box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+      /* Slightly larger shadow */
+    }
+
+    .scroll-top:active {
+      transform: scale(1.05);
+      /* Minor scale reduction on click */
+    }
+
+    .scroll-top-icon {
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-top:hover .scroll-top-icon {
+      transform: translateY(-3px);
+    }
+
+    /* Progress Ring Styling */
+    .progress-ring {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      /* To start from the top */
+    }
+
+    .progress-ring__circle {
+      transition: stroke-dashoffset 0.35s;
+      transform-origin: 50% 50%;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+      }
+
+      100% {
+        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+      }
+    }
+
+    .scroll-top:hover {
+      animation: pulse 1.5s infinite;
+    }
+
+    .scroll-top.show {
+      animation: none;
+      /* No animation when showing the button */
+    }
+
+    .scroll-top.show:hover {
+      animation: pulse 1.5s infinite;
+      /* Pulse on hover */
+    }
+  </style>
+  <script>
+    // Get the button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    const progressCircle = document.querySelector(".progress-ring__circle");
+    const radius = progressCircle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    // Set the circle progress properties
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    // Function to show or hide the button based on scroll position
+    function toggleScrollButton() {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.classList.add("show");
+      } else {
+        scrollToTopBtn.classList.remove("show");
+      }
+    }
+
+    // Function to set the scroll progress on the button ring
+    function setProgress(percent) {
+      const offset = circumference - (percent / 100) * circumference;
+      progressCircle.style.strokeDashoffset = offset;
+    }
+
+    // Listen for scroll events to update button visibility and progress
+    window.addEventListener("scroll", () => {
+      toggleScrollButton();
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      setProgress(scrollPercent);
+    });
+
+    // Smooth scroll to top when the button is clicked
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+
+
+  <div class="gtranslate_wrapper"></div>
+  <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000
+    });
+  </script>
+
+
+  </script>
+  <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+  <script src="../assets/js/subscribe.js"></script>
+  <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="../assets/js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="../assets/js/popper.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <script src="../assets/js/slick.min.js"></script>
+  <script src="../assets/js/ajax-contact.js"></script>
+  <script src="../assets/js/waypoints.min.js"></script>
+  <script src="../assets/js/jquery.counterup.min.js"></script>
+  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="../assets/js/jquery.easing.min.js"></script>
+  <script src="../assets/js/scrolling-nav.js"></script>
+  <script src="../assets/js/wow.min.js"></script>
+  <script src="../assets/js/particles.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/popup.js"></script>
+  <script src="../tools/smoothScroll.js"></script>
+  <script src="../assets/js/loginupdate.js"></script>
+</body>
+
+</html>

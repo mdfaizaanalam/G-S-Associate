@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Terms of Service - G S Associates</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="./assets/images/favicon2.webp" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/animate.css" />
+  <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="./assets/css/slick.css" />
+  <link rel="stylesheet" href="./assets/css/LineIcons.css" />
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/default.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/popup.css" />
+  <link rel="stylesheet" href="./assets/css/navbar.css">
+
+  <!-- Linked CSS for social logos -->
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+<body>
+  <header class="header-area">
+    <div style="display: flex; justify-content: center;" class="navbar-area">
+      <div style="display: flex; justify-content: center;" class="container">
+        <div class="row">
+          <div style="display: flex; justify-content: center;;" class="">
+            <nav class="navbar navbar-expand-lg" style="display: flex; background-color: #2c3e50;">
+              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <div class="icon1">
+                  <a href="./index.html">
+                    <img src="./assets/images/GSAssociatesLogo.png" alt="G S Associates Logo" style="width: 13rem;">
+                  </a>
+                </div>
+                <ul id="nav" class="navbar-nav ml-auto" style="margin: auto;">
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./index.html">
+                      <i class="fas fa-home icon-hover" style="margin: 5px;"></i> Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./about.html">
+                      <i class="fas fa-info-circle icon-hover" style="margin: 5px;"></i> About Us
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./finance.html">
+                      <i class="fas fa-graduation-cap icon-hover" style="margin: 5px;"></i> Courses
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./contact.html">
+                      <i class="fas fa-envelope icon-hover" style="margin: 5px;"></i> Contact
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./faq.html">
+                      <i class="fas fa-question-circle icon-hover" style="margin: 5px;"></i> Help
+                    </a>
+                  </li>
+                  <!-- Dropdown for Explore -->
+                  <li class="nav-item dropdown" onmouseover="toggleDropdown(true)" onmouseout="toggleDropdown(false)">
+                    <a class="page-scroll dropdown-toggle" href="#">
+                      <i class="fas fa-chevron-down icon-hover" style="margin: 5px;"></i> Explore More
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="./trends.html"><i class="fas fa-chart-line icon-hover" style="margin: 5px;"></i>
+                          Trends</a></li>
+                      <li><a href="./tools/sip.html"><i class="fas fa-tools icon-hover" style="margin: 5px;"></i>
+                          Tools</a></li>
+                      <li><a class="active-link" href="./blog.html"><i class="fas fa-blog icon-hover"
+                            style="margin: 5px;"></i> Blogs</a></li>
+                      <li><a href="./quiz.html"><i class="fas fa-question icon-hover" style="margin: 5px;"></i>
+                          Quiz</a>
+                      </li>
+                      <li><a href="./maps.html"><i class="fas fa-map icon-hover" style="margin: 5px;"></i> MAPS</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Navigation item placeholder for Login/Register or Logout button -->
+                  <li class="nav-item no-underline" id="auth-btn-container">
+                    <a class="main-btn navbar-btn" style="padding: 2px 20px;" data-scroll-nav="0"
+                      href="./loginPage.html"> Login/Register
+                    </a>
+                  </li>
+                  <li class="nav-item no-underline align-self-center">
+                    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                      <span>🌞</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <script>
+            const toggleButton = document.getElementById('theme-toggle');
+            var body = document.body;
+            var currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme === 'dark') {
+              body.classList.add('dark-mode');
+              toggleButton.classList.add('dark');
+              toggleButton.querySelector('span').textContent = '🌞';
+            }
+
+            toggleButton.addEventListener('click', function () {
+              body.classList.toggle('dark-mode');
+              toggleButton.classList.toggle('dark');
+
+              // Update button icon based on mode
+              if (body.classList.contains('dark-mode')) {
+                toggleButton.querySelector('span').textContent = '🌙';  // Light mode icon
+                localStorage.setItem('theme', 'dark');
+              } else {
+                toggleButton.querySelector('span').textContent = '🌞';  // Dark mode icon
+                localStorage.setItem('theme', 'light');
+              }
+              loadShow();
+            });
+          </script>
+          </nav>
+
+          <nav class="mobile-menu ">
+            <a href="./index.html">
+              <img src="./assets/images/GSAssociatesLogo.png" alt="icon.png" style="width: 13rem;"></a>
+            <a class="page-scroll active-link" href="./index.html">
+              <i class="fas fa-home icon-hover" style="margin: 5px;"></i> Home</a>
+            <a class="page-scroll" href="./about.html">
+              <i class="fas fa-info-circle icon-hover" style="margin: 5px;"></i> About Us</a>
+
+            <!-- <a class="page-scroll" href="./tools/sip.html"><i class="fas fa-tools icon-hover"
+                style="margin: 5px;"></i>Tools</a>
+
+            <a class="page-scroll" href="./trends.html">
+              <i class="fas fa-chart-line icon-hover" style="margin: 5px;"></i> Trends</a> -->
+
+            <a class="page-scroll" href="./contact.html">
+              <i class="fas fa-envelope icon-hover" style="margin: 5px;"></i> Contact</a>
+
+            <a class="page-scroll" href="./blog.html">
+              <i class="fas fa-blog icon-hover" style="margin: 5px;"></i> Blogs</a>
+
+            <a class="page-scroll" href="./quiz.html">
+              <i class="fas fa-question icon-hover" style="margin: 5px;"></i>Quiz</a>
+
+            <a class="page-scroll" href="./finance.html">
+              <i class="fas fa-graduation-cap icon-hover" style="margin: 5px;"></i> Courses</a>
+
+            <li class="nav-item no-underline" id="auth-btn-container-mobile">
+              <a class="main-btn navbar-btn" style="padding: 2px 20px; transform: none; border: none;"
+                href="./loginPage.html">Login/Register 💻</a>
+            </li>
+
+            <li class="nav-item no-underline">
+              <button id="theme-toggle2" class="theme-toggle2" style="margin-right: 2px;">
+                🌙
+              </button>
+            </li>
+
+            <div class="mobile-menu__trigger" onclick="toggleMobileMenu()">
+              <span></span>
+            </div>
+          </nav>
+          <script>
+            const toggleBtn = document.getElementById('theme-toggle2');
+            var body = document.body;
+            var currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme === 'dark') {
+              body.classList.add('dark-mode');
+              toggleBtn.classList.add('dark');
+              toggleBtn.textContent = '🌞';
+            }
+
+            toggleBtn.addEventListener('click', function () {
+              body.classList.toggle('dark-mode');
+              toggleBtn.classList.toggle('dark');
+
+              // Update button icon based on mode
+              if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '🌞';  // Light mode icon
+                localStorage.setItem('theme', 'dark');
+              } else {
+                toggleBtn.textContent = '🌙';  // Dark mode icon
+                localStorage.setItem('theme', 'light');
+              }
+            });
+          </script>
+          <link href="./assets/css/navbar.css" rel="stylesheet">
+          <script type="text/javascript" src="./assets/js/navbar.js"></script>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <div class="preloader">
+    <div class="loader">
+      <div class="ytp-spinner">
+        <div class="ytp-spinner-container">
+          <div class="ytp-spinner-rotator">
+            <div class="ytp-spinner-left">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+            <div class="ytp-spinner-right">
+              <div class="ytp-spinner-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s"
+        style="visibility: visible; animation-duration: 1.3s; animation-delay: 1.4s;">
+        <div class="anim" data-tilt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="particles-1" class="particles"><canvas class="particles-js-canvas-el" width="1998" height="1012"
+      style="width: 100%; height: 100%;"></canvas></div>
+  </div>
+  </header>
+  <style>
+    /* Dark mode styles for blog content */
+    .dark-mode .blog-content {
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+
+    .dark-mode .card {
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+    }
+
+    .dark-mode .card p {
+      background-color: #2a2a2a;
+      color: white;
+    }
+
+    .dark-mode .card ol {
+      color: white;
+    }
+
+    .dark-mode h4 {
+      color: wheat;
+    }
+
+    .dark-mode .blog-content h1 {
+      color: #ffffff;
+      /* Change to white or any light color you prefer */
+    }
+
+    .dark-mode .Lastupdate {
+      color: #c0c0c0;
+    }
+
+    .dark-mode .Lastupdate span {
+      color: #ffffff;
+    }
+  </style>
+  <div class="blog-content">
+    <article>
+      <br><br><br><br>
+      <div class="header">
+        <h1 style="text-align: center;">Website Terms and Conditions of Use</h1>
+      </div><br>
+      <div class="Lastupdate">
+        Last updated: <span id="last-updated-date"></span>
+      </div>
+
+      <div class="card">
+        <h4>1. Terms</h4>
+        <p>By accessing this Website, accessible from <a href="https://gsassociates.netlify.app/"
+            style="color: black;">https://gsassociates.netlify.app/</a>, you are agreeing to be bound by these
+          Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable
+          local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The
+          materials
+          contained in this Website are protected by copyright and trade mark law.</p>
+      </div>
+
+      <div class="card">
+        <h4>2. Use License</h4>
+        <p>Permission is granted to temporarily download one copy of the materials on G S Associates's Website for
+          personal,
+          non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under
+          this
+          license you may not:</p>
+        <ol>
+          <li>Modify or copy the materials;</li>
+          <li>Use the materials for any commercial purpose or for any public display;</li>
+          <li>Attempt to reverse engineer any software contained on G S Associates's Website;</li>
+          <li>Remove any copyright or other proprietary notations from the materials; or</li>
+          <li>Transfer the materials to another person or "mirror" the materials on any other server.</li>
+        </ol>
+        <p>This will let G S Associates terminate upon violations of any of these restrictions. Upon termination, your
+          viewing
+          right will also be terminated, and you should destroy any downloaded materials in your possession, whether it
+          is
+          printed or electronic format. These Terms of Service have been created with the help of the Terms Of Service
+          Generator.</p>
+      </div>
+
+      <div class="card">
+        <h4>3. Disclaimer</h4>
+        <p>All the materials on G S Associates's Website are provided "as is". G S Associates makes no warranties, may
+          it be expressed
+          or implied, therefore negates all other warranties. Furthermore, G S Associates does not make any
+          representations
+          concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to
+          such
+          materials or any sites linked to this Website.</p>
+      </div>
+
+      <div class="card">
+        <h4>4. Limitations</h4>
+        <p>G S Associates or its suppliers will not be held accountable for any damages that will arise with the use or
+          inability
+          to use the materials on G S Associates's Website, even if G S Associates or an authorized representative of
+          this Website has
+          been notified, orally or in writing, of the possibility of such damage. Some jurisdictions do not allow
+          limitations on implied warranties or limitations of liability for incidental damages, so these limitations may
+          not
+          apply to you.</p>
+      </div>
+
+      <div class="card">
+        <h4>5. Revisions and Errata</h4>
+        <p>The materials appearing on G S Associates's Website may include technical, typographical, or photographic
+          errors.
+          G S Associates does not promise that any of the materials on this Website are accurate, complete, or current.
+          G S Associates
+          may change the materials contained on its Website at any time without notice and does not make any
+          commitment to update the materials.</p>
+      </div>
+
+      <div class="card">
+        <h4>6. Links</h4>
+        <p>G S Associates has not reviewed all of the sites linked to its Website and is not responsible for the
+          contents of
+          any
+          such linked site. The presence of any link does not imply endorsement by G S Associates of the site. The use
+          of any
+          linked website is at the user's own risk.</p>
+      </div>
+
+      <div class="card">
+        <h4>7. Site Terms of Use Modifications</h4>
+        <p>G S Associates may revise these Terms of Use for its Website at any time without prior notice. By using this
+          Website,
+          you are agreeing to be bound by the current version of these Terms and Conditions of Use.</p>
+      </div>
+
+      <div class="card">
+        <h4>8. Your Privacy</h4>
+        <p>Please read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+      </div>
+
+      <div class="card">
+        <h4>9. Governing Law</h4>
+        <p>Any claim related to G S Associates's Website shall be governed by the laws of India without regard
+          to its conflict of
+          law provisions.</p>
+      </div>
+    </article>
+  </div>
+
+  <style>
+    .header h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    .lastupdate {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .card {
+      background: #fff;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h4 {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .card p,
+    .card li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .card ol {
+      margin: 12px 0 12px 20px;
+    }
+  </style>
+
+  <!-- ===== JavaScript (auto last updated) ===== -->
+  <script>
+    document.getElementById("last-updated-date").textContent =
+      new Date().toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+  </script>
+
+
+  <footer>
+    <div class="footer-area pt-70">
+      <div class="footer-widget pb-50">
+        <div class="row" id="footer">
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="footer-about mt-50 ml-45 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <img src="./assets/images/GSAssociatesLogo.png" alt="G S Associates Logo"
+                style="height: 100px; width: auto; margin-bottom: 15px;" />
+              <p class="text custom-margin">
+                We at G S Associates aim to make you a stock market Guru easily with our AI-powered teaching and
+                financial blogs.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-7 col-sm-7">
+            <div class="footer-link d-flex mt-50 justify-content-md-between"
+              style="justify-content: space-around !important;">
+              <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="footer-title">
+                  <h3 class="title custom-margin">Quick Links</h3>
+                </div>
+                <ul class="link custom-margin">
+                  <li><a href="./blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                  <li><a href="./trends.html"><i class="fas fa-chart-line"></i> Trends</a></li>
+                  <li><a href="./privacy-policy.html"><i class="fas fa-user-secret"></i> Privacy Policy</a></li>
+                  <li><a href="./terms-of-service.html"><i class="fas fa-file-alt"></i> Terms of Service</a></li>
+
+                </ul>
+              </div>
+              <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                <div class="footer-title">
+                  <h4 class="title custom-margin">Resources</h4>
+                </div>
+                <ul class="link custom-margin">
+                  <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                  <li><a href="./about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                  <li><a href="./tools/sip.html"><i class="fas fa-tools"></i> Tools</a></li>
+                  <li><a href="./quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-7 col-sm-7">
+            <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+              <div class="footer-title">
+                <h4 class="title custom-margin">Contact Us</h4>
+              </div>
+              <ul class="contact custom-margin-big" style="justify-content: space-around;">
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-envelope d-sm-flex align-items-center white" style="font-size: 16px; width: 10%;"></i>
+                  <p style="width: 80%;">
+                    <a href="mailto:sarfraz813@gmail.com" target="_blank"
+                      style="color: white; text-decoration: underline;">
+                      sarfraz813@gmail.com
+                    </a>
+                  </p>
+                </li>
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-globe d-sm-flex align-items-center white" style="font-size: 16px; width: 10%;"></i>
+                  <div style="width: 80%;">
+                    <a href="https://gsassociates.netlify.app" target="_blank" style="color: #fff;">
+                      G S Associates
+                    </a>
+                  </div>
+                </li>
+                <li class="d-sm-flex justify-content-center">
+                  <i class="fa fa-location-dot d-sm-flex align-items-center white"
+                    style="font-size: 14px; width: 10%;"></i>
+                  <div style="width: 80%;">
+                    <a href="https://www.google.com/maps/place/Ashiana+Plaza,+Patna,+Bihar/" target="_blank"
+                      rel="noopener noreferrer" style="color: #fff;">Patna, Bihar, India</a>
+                  </div>
+                </li>
+
+                <div class="social-icons">
+                  <a href="https://www.instagram.com/_sarfraz_ahmad"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/sarfraz.ahmad.3701"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://x.com/mdfaizaanalam_"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://github.com/mdfaizaanalam"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/mdfaizaanalam"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s"
+        style="text-align: center">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright d-sm-flex justify-content-center"
+              style="display: flex; justify-content: center; text-align: center; width: 100%; height: 100%;">
+              <div class="copyright-content" style="text-align: center">
+                <p class="text" style="text-align: center">
+                  © <span id="copyright-year"></span> G S Associates. All rights are reserved<br />
+                  Made with ♥ in India
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      // Automatically set the current year
+      document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    </script>
+
+  </footer>
+
+
+  </script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+  <script src="./assets/js/subscribe.js"></script>
+  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./assets/js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins.js"></script>
+  <script src="./assets/js/slick.min.js"></script>
+  <script src="./assets/js/ajax-contact.js"></script>
+  <script src="./assets/js/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+  <script src="./assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="./assets/js/jquery.easing.min.js"></script>
+  <script src="./assets/js/scrolling-nav.js"></script>
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/popup.js"></script>
+  <script src="./tools/smoothScroll.js"></script>
+  <script src="./assets/js/loginupdate.js"></script>
+
+</body>
+
+</html>
