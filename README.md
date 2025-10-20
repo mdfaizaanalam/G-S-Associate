@@ -1,4 +1,4 @@
-# ![G S Associates Logo](./assets/images/favicon2.webp) G S Associates
+# ![G S Associates Logo](./assets/images/GSAssociatesLogo.png) G S Associates
 
 ---
 
@@ -240,4 +240,3 @@ This project is licensed under the **MIT License** - see [LICENSE](./LICENSE)
 * **GitHub:** [https://github.com/mdfaizaanalam](https://github.com/mdfaizaanalam)
 * **LinkedIn:** [https://www.linkedin.com/in/mdfaizaanalam](https://www.linkedin.com/in/mdfaizaanalam)
 
-```
