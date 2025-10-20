@@ -234,6 +234,7 @@ This project is licensed under the **MIT License** - see [LICENSE](./LICENSE)
 
 ---
 
+<<<<<<< HEAD
 ## 📞 Connect with Me
 
 <p align="center">
@@ -245,3 +246,4 @@ This project is licensed under the **MIT License** - see [LICENSE](./LICENSE)
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="40" width="50" />
   </a>
 </p>
+
